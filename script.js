@@ -40,6 +40,9 @@ function fillMoviesList(){
         }
 
         element_seen.src = iconName;
+        element_seen.addEventListener('click', function(){
+            onClickSeenImageCallback(item, element_seen);
+        });
         element_seen.appendChild(seen);
 
         element_listItem.appendChild(id);
@@ -51,4 +54,18 @@ function fillMoviesList(){
 
         element_moviesList.appendChild(element_listItem);
     });
+}
+
+function onClickSeenImageCallback(movie, element_image){
+    var seen = "T";
+    var image_src = 'true.png';
+    if ("T" == movie.seen){
+        seen = "F";
+        image_src = 'false.png';
+    }
+
+    movie.seen = seen;
+    element_image.src = image_src;
+
+    countSeenMovies();
 }
