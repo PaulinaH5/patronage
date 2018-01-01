@@ -1,0 +1,19 @@
+.moviesCounter{
+    font-weight: bold;
+}
+
+#moviesListContainer{
+    padding-top:100px;
+}
+
+#moviesCountersContainer{
+    text-align:right;
+}
+
+#moviesList{
+    text-align: center;
+}
+
+#moviesList li:hover{
+    background-color: yellow;
+}
