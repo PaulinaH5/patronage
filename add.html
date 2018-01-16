@@ -30,6 +30,15 @@
     <p><span id="errorMessage"></span></p>
 </div>
 
+<script type="module">
+    import {
+        countAllMovies,
+        countSeenMovies,
+    } from "./index.js";
+
+    countAllMovies("anotherMoviesCounterAll");
+    countSeenMovies("anotherMoviesCounterSeen");
+</script>
 <script src="add.js"></script>
 </body>
 </html>
