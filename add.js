@@ -5,6 +5,7 @@ function setMovieStorage(value) {
 }
 
 function onSubmitFormClick(form) {
+    console.log(movieStorage.get());
     var errorMsg = "Error: ";
     var isError = false;
 
@@ -42,11 +43,18 @@ function onSubmitFormClick(form) {
         var element_errorMessage = document.getElementById("errorMessage");
         element_errorMessage.innerHTML = errorMsg;
     } else {
-        clearFormFields();
+        var movie = {
+            title : mfTitle,
+            year : mfYear,
+            genre : mfGenre,
+            summary : mfSummary,
+        };
+        movieStorage.set(movie);
+        clearFormFields(form);
     }
 }
 
-function clearFormFields() {
+function clearFormFields(form) {
     var formItems = [
         form.elements["title"],
         form.elements["year"],
