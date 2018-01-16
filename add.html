@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add movie</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="moviesCountersContainer">
+    <p>All: <span class="moviesCounter" id="anotherMoviesCounterAll"></span></p>
+    <p>Viewed: <span class="moviesCounter" id="anotherMoviesCounterSeen"></span></p>
+</div>
+<div id="formContainer">
+    <form>
+        Title: <input type="text" name="title"><br>
+        Year: <input type="text" name="year"><br>
+        Genre: <input type="text" name="genre"><br>
+        Summary: <input type="text" name="summary"><br>
+        Viewd :
+        <label><input type="radio" name="seen"> Seen</label>
+        <label><input type="radio" name="seen"> Not seen</label>
+        <br><br>
+        <input class ="btn" type="button" value="Submit" onclick="">
+    </form>
+</div>
+<div id="errorContainer">
+    <p><span id="errorMessage"></span></p>
+</div>
+
+<script src="add.js"></script>
+</body>
+</html>
