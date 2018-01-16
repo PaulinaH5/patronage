@@ -11,6 +11,9 @@
     <p>Viewed: <span class="moviesCounter" id="anotherMoviesCounterSeen"></span></p>
 </div>
 <div id="formContainer">
+    <div id="errorContainer">
+        <p><span id="errorMessage"></span></p>
+    </div>
     <form>
         Title: <input type="text" name="title"><br>
         Year: <input type="text" name="year"><br>
@@ -20,14 +23,11 @@
         <label><input type="radio" name="seen"> Seen</label>
         <label><input type="radio" name="seen"> Not seen</label>
         <br><br>
-        <input class ="btn" type="button" value="Submit" onclick="">
+        <input class ="btn" type="button" value="Submit" onclick="onSubmitFormClick(this.form)">
     </form>
     <div class ="btn">
         <a href ="index.html" >INDEX</a>
     </div>
-</div>
-<div id="errorContainer">
-    <p><span id="errorMessage"></span></p>
 </div>
 
 <script type="module">
