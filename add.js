@@ -1,3 +1,9 @@
+var movieStorage = null;
+
+function setMovieStorage(value) {
+    movieStorage = value;
+}
+
 function onSubmitFormClick(form) {
     var errorMsg = "Error: ";
     var isError = false;
@@ -20,6 +26,16 @@ function onSubmitFormClick(form) {
     if ("" === mfGenre) {
         isError = true;
         errorMsg += "missing genre<br>"
+    }
+
+    var moviesList = movieStorage.get();
+    for (var item in moviesList) {
+        var movie = moviesList[item];
+            if (movie.title === mfTitle) {
+                isError = true;
+                errorMsg += "title is repeating<br>";
+                break;
+        }
     }
 
     if (true === isError) {

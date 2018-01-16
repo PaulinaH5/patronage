@@ -30,15 +30,17 @@
     </div>
 </div>
 
+<script src="add.js"></script>
 <script type="module">
     import {
         countAllMovies,
         countSeenMovies,
+        moviesStorage,
     } from "./index.js";
 
     countAllMovies("anotherMoviesCounterAll");
     countSeenMovies("anotherMoviesCounterSeen");
+    setMovieStorage(moviesStorage);
 </script>
-<script src="add.js"></script>
 </body>
 </html>
