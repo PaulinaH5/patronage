@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 
-<body onload="onStart()">
-
+<body>
     <div id="moviesCountersContainer">
         <p>All:
             <span class="moviesCounter" id="moviesCounterAll"></span>
@@ -22,8 +21,17 @@
         <ul id="moviesList"></ul>
     </div>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <script type="module">
+        import {
+            countAllMovies,
+            countSeenMovies,
+            fillMoviesList,
+        } from "./index.js";
+
+        countAllMovies("moviesCounterAll");
+        countSeenMovies("moviesCounterSeen");
+        fillMoviesList("moviesList", "moviesCounterSeen");
+    </script>
 </body>
 
 </html>
