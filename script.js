@@ -12,7 +12,7 @@ function countAllMovies() {
 function countSeenMovies() {
     var counterSeenMovies = 0;
     moviesData.forEach(function(item){
-        if ("T" == item.seen) {
+        if ("T" === item.seen) {
             counterSeenMovies += 1;
         }
     });
@@ -35,7 +35,7 @@ function fillMoviesList(){
         var seen = document.createTextNode(item.seen);
 
         var iconName = 'false.png';
-        if ("T" == item.seen) {
+        if ("T" === item.seen) {
             iconName = 'true.png';
         }
 
@@ -43,8 +43,8 @@ function fillMoviesList(){
         element_seen.addEventListener('click', function(){
             onClickSeenImageCallback(item, element_seen);
         });
-        element_seen.appendChild(seen);
 
+        element_seen.appendChild(seen);
         element_listItem.appendChild(id);
         element_listItem.appendChild(title);
         element_listItem.appendChild(year);
@@ -59,7 +59,7 @@ function fillMoviesList(){
 function onClickSeenImageCallback(movie, element_image){
     var seen = "T";
     var image_src = 'true.png';
-    if ("T" == movie.seen){
+    if ("T" === movie.seen){
         seen = "F";
         image_src = 'false.png';
     }

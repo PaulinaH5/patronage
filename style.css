@@ -3,6 +3,7 @@
 }
 
 #moviesListContainer{
+    display: initial;
     padding-top:100px;
 }
 
@@ -11,7 +12,7 @@
 }
 
 #moviesList{
-    text-align: center;
+    text-align: left;
 }
 
 #moviesList li:hover{
