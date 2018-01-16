@@ -1,5 +1,6 @@
 .moviesCounter{
     font-weight: bold;
+    color:#45B5FF;
 }
 
 #moviesListContainer{
@@ -9,6 +10,7 @@
 
 #moviesCountersContainer{
     text-align:right;
+    border-bottom: 1px solid #45B5FF;
 }
 
 #moviesList{
@@ -16,5 +18,45 @@
 }
 
 #moviesList li:hover{
-    background-color: yellow;
+    background-color: #B6E9FF;
+}
+
+li {
+    border-bottom: 1px solid #28BEFF;
+}
+
+#moviesList{
+    width: 500px;
+}
+
+.movie_element{
+    border-bottom: 1px solid #B6E9FF;
+}
+
+body {
+    background-color:#F3FAFF
+}
+
+.btn {
+    background-color: #4A86EC;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom:10px;
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #6BA2FF;
+}
+
+#formContainer{
+    text-align:center;
+    padding-top:20px;
 }
