@@ -18,7 +18,7 @@ function onSubmitFormClick(form) {
         errorMsg += "missing title<br>"
     }
 
-    if ("" === mfYear || mfYear != 4) {
+    if ("" === mfYear || mfYear.length != 4) {
         isError = true;
         errorMsg += "missing year or does not have 4 digits<br>"
     }
@@ -42,6 +42,18 @@ function onSubmitFormClick(form) {
         var element_errorMessage = document.getElementById("errorMessage");
         element_errorMessage.innerHTML = errorMsg;
     } else {
-
+        clearFormFields();
     }
+}
+
+function clearFormFields() {
+    var formItems = [
+        form.elements["title"],
+        form.elements["year"],
+        form.elements["genre"],
+        form.elements["summary"]
+    ];
+    formItems.forEach(function (item) {
+        item.value = "";
+    })
 }
